@@ -1,0 +1,71 @@
+.planet-size {
+  height: 6rem;
+  width: 6rem;
+}
+
+.list-detail {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.list-center {
+  max-width: 40rem;
+}
+
+.p-dataview.p-dataview-list .p-dataview-content > .p-grid > div {
+  border: solid #e9ecef;
+  border-width: 10px 10px 10px 10px;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.planet-name {
+  color: #2196F3;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.p-dataview.p-component.p-dataview-list{
+  margin-top: 1rem;
+}
+
+.captain-name {
+  font-weight: bold;
+  font-family: -webkit-pictograph;
+}
+
+.team-members {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: space-evenly;
+  gap: 2rem;
+  align-items: center;
+}
+
+.dialog {
+  width: 50vw;
+}
+
+.team-dropdown {
+  margin-left: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  margin-bottom: 3rem;
+}
+
+#dialog .p-dropdown-panel {
+  z-index: 30000 !important;
+}
+.p-dropdown-items-wrapper {
+  text-align: left;
+}
+
