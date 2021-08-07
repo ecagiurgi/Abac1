@@ -18,12 +18,14 @@ import {ButtonModule} from "primeng/button";
 import {ConfirmDialogModule} from "primeng/confirmdialog";
 import {FormsModule} from "@angular/forms";
 import {DropdownModule} from "primeng/dropdown";
+import { CreatePlanetComponent } from './create-planet/create-planet.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlanetComponent
+    PlanetComponent,
+    CreatePlanetComponent
   ],
   imports: [
     BrowserModule,

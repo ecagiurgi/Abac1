@@ -65,6 +65,7 @@ export class PlanetComponent implements OnInit {
     let planetDetails: Planet[] = [];
     planets.forEach(p => {
       this.robotService.getRobots(p.team.id).then(robots => {
+        debugger
         let item: Planet = p;
         item.robots = robots.map(e => e.name);
         planetDetails.push(item);
@@ -124,9 +125,12 @@ export class PlanetComponent implements OnInit {
   assignTeam() {
     let item: PlanetForUpdate = {id: this.selectedItem?.id, teamId: this.selectedTeam};
     this.planetService.updatePlanet(item).then((res) => {
-      this.message = [{severity:'info', summary:'Confirmed', detail:'Team was updated. Good luck!'}];
+      this.message = [{severity: 'info', summary: 'Confirmed', detail: 'Team was updated. Good luck!'}];
       let updateItem = this.planets.find(el => el.id === res.id)!;
       this.planets[this.planets.indexOf(updateItem)].team = res.team;
+      this.robotService.getRobots(res.team.id).then(robots => {
+        this.planets[this.planets.indexOf(updateItem)].robots = robots.map(e => e.name);
+      });
     });
   }
 
