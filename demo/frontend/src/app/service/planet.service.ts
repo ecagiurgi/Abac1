@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Planet} from "../model/Planet";
 import {PlanetForUpdate} from "../model/PlanetForUpdate";
+import {PlanetForSave} from "../model/PlanetForSave";
 
 @Injectable({
   providedIn: 'root'
@@ -22,4 +23,8 @@ export class PlanetService {
       .toPromise()
   }
 
+  savePlanet(planet: PlanetForSave): Promise<Planet>{
+    return this.http.post<any>(this.baseUrl  + '/save', planet)
+      .toPromise()
+  }
 }

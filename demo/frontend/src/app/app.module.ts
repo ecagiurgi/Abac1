@@ -19,6 +19,13 @@ import {ConfirmDialogModule} from "primeng/confirmdialog";
 import {FormsModule} from "@angular/forms";
 import {DropdownModule} from "primeng/dropdown";
 import { CreatePlanetComponent } from './create-planet/create-planet.component';
+import {RippleModule} from "primeng/ripple";
+import {RadioButtonModule} from "primeng/radiobutton";
+import {CheckboxModule} from "primeng/checkbox";
+import {InputTextModule} from "primeng/inputtext";
+import {InputTextareaModule} from "primeng/inputtextarea";
+import {TextFieldModule} from "@angular/cdk/text-field";
+import {TooltipModule} from "primeng/tooltip";
 
 
 @NgModule({
@@ -34,6 +41,7 @@ import { CreatePlanetComponent } from './create-planet/create-planet.component';
     TabMenuModule,
     DataViewModule,
     TagModule,
+    InputTextareaModule,
     SplitButtonModule,
     MenuModule,
     BrowserAnimationsModule,
@@ -42,7 +50,14 @@ import { CreatePlanetComponent } from './create-planet/create-planet.component';
     ButtonModule,
     MessagesModule,
     DropdownModule,
-    FormsModule
+    InputTextModule,
+    CheckboxModule,
+    ButtonModule,
+    RadioButtonModule,
+    RippleModule,
+    FormsModule,
+    TextFieldModule,
+    TooltipModule
 
   ],
   providers: [

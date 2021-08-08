@@ -65,7 +65,6 @@ export class PlanetComponent implements OnInit {
     let planetDetails: Planet[] = [];
     planets.forEach(p => {
       this.robotService.getRobots(p.team.id).then(robots => {
-        debugger
         let item: Planet = p;
         item.robots = robots.map(e => e.name);
         planetDetails.push(item);

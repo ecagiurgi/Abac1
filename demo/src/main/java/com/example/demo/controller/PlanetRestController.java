@@ -2,8 +2,8 @@ package com.example.demo.controller;
 
 
 import com.example.demo.dto.PlanetDto;
-import com.example.demo.dto.PlanetSaveAndUpdateDto;
-import com.example.demo.exception.BusinessException;
+import com.example.demo.dto.PlanetSaveDto;
+import com.example.demo.dto.PlanetUpdateDto;
 import com.example.demo.service.PlanetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -28,8 +28,12 @@ public class PlanetRestController {
     }
 
     @PutMapping("/update")
-    public PlanetDto update(@RequestBody PlanetSaveAndUpdateDto planet) {
+    public PlanetDto update(@RequestBody PlanetUpdateDto planet) {
         return planetService.update(planet);
     }
 
+    @PostMapping("/save")
+    public PlanetDto save(@RequestBody PlanetSaveDto planet) {
+        return planetService.save(planet);
+    }
 }

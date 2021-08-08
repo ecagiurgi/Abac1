@@ -1,1 +1,50 @@
-<p>create-planet works!</p>
+<p-messages [value]="message"></p-messages>
+<div class="p-grid p-fluid">
+  <div class="p-col-12 p-md-4">
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon"><i class="pi pi-compass"></i></span>
+      <input type="text" pInputText placeholder="Planet Name" [(ngModel)]="planetName">
+    </div>
+  </div>
+
+  <div class="p-col-12 p-md-4">
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon"><i class="pi pi-book"></i></span>
+      <span class="p-float-label">
+      <textarea id="float-input" [autoResize]="false" rows="5" cols="30" pInputTextarea [(ngModel)]="planetDescription"></textarea>
+      <label for="float-input" class = "font-fam">Description</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="p-col-12 p-md-4 dropdown">
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon"><i class="pi pi-users"></i></span>
+      <p-dropdown [options]="teams" [(ngModel)]="selectedTeam" placeholder="Select a team"
+                  optionLabel="name" optionValue="id"
+                  [showClear]="true"></p-dropdown>
+    </div>
+
+    <div class="p-inputgroup">
+      <span class="p-inputgroup-addon"><i class="pi pi-image"></i></span>
+      <p-dropdown [options]="images" [(ngModel)]="selectedImage" [showClear]="true" placeholder="Select an image">
+        <ng-template pTemplate="selectedItem">
+          <div class="country-item country-item-value"  *ngIf="selectedImage">
+            <img src="{{selectedImage}}" />
+          </div>
+        </ng-template>
+        <ng-template let-image pTemplate="item">
+          <div class="country-item">
+            <img src="{{image}}" />
+          </div>
+        </ng-template>
+      </p-dropdown>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-outlined" pTooltip="Click to confirm" (click)="createPlanet()"></button>
+    <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-outlined" pTooltip="Click to cancel" (click)="cancel()"></button>
+  </div>
+</div>
+

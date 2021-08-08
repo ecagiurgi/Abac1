@@ -1,4 +1,3 @@
-import {Status} from "./Status";
 import {Team} from "./Team";
 import {PlanetStatus} from "./PlanetStatus";
 

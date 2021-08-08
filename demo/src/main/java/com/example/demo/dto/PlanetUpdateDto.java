@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class PlanetSaveAndUpdateDto {
+public class PlanetUpdateDto {
     private Integer id;
     private Status status;
     private Integer teamId;

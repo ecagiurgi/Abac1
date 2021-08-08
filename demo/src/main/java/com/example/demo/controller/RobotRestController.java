@@ -22,7 +22,7 @@ public class RobotRestController {
     }
 
     @GetMapping("/listByTeamId")
-    public List<RobotDto> register(@RequestParam("teamId") Integer teamId){
+    public List<RobotDto> listByTeamId(@RequestParam("teamId") Integer teamId){
         return robotService.getRobotsByTeamId(teamId);
     }
 }
